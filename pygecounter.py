@@ -11,7 +11,7 @@ def ps(documento):
     # grep ou gs
     try:
         output = subprocess.check_output([
-            grep, '%%Pages', documento
+            grep, '-a', '%%Pages', documento
         ])
 
     except subprocess.CalledProcessError:
